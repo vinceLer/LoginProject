@@ -1,9 +1,12 @@
 import './App.css';
+import LoginContainer from './containers/LoginContainer';
 
 function App() {
   return (
     <div className="App">
-      <div className="text-3xl font-bold underline">Hello World !</div>
+      <div>
+        <LoginContainer />
+      </div>
     </div>
   );
 }
