@@ -1,5 +1,9 @@
-﻿namespace LoginProjectAPI.Models
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace LoginProjectAPI.Models
 {
+    [Table(name: "loginUser")]
     public class User
     {
         private int id;
@@ -7,9 +11,9 @@
         private string mail;
         private string password;
 
-        public int Id { get => id; set => id = value; }
-        public string Username { get => username; set => username = value; }
-        public string Mail { get => mail; set => mail = value; }
-        public string Password { get => password; set => password = value; }
+        [Key] public int Id { get => id; set => id = value; }
+        [Required] public string Username { get => username; set => username = value; }
+        [Required] public string Mail { get => mail; set => mail = value; }
+        [Required] public string Password { get => password; set => password = value; }
     }
 }
